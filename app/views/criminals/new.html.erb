@@ -1,0 +1,9 @@
+<div class="container mt-3">
+  <h1>Incarcerate a Criminal</h1>
+  <%= simple_form_for [@prison, @criminal] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image_url %>
+    <%= f.input :sentence, label: 'Sentence in days' %>
+    <%= f.submit "INCARCERATE", class: 'btn btn-danger mt-2' %>
+  <% end %>
+</div>

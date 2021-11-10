@@ -1,0 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @prison.banner_url %>);">
+  <div class="container">
+    <h1><%= @prison.name %></h1>
+    <%# Add button to add criminal here %>
+    <%= link_to 'INCARCERATE', new_prison_criminal_path(@prison), class: 'btn btn-danger mt-2' %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards mt-3">
+    <% @prison.criminals.each do |criminal| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= criminal.image_url %>)">
+        <%= criminal.name %>
+        <%= link_to criminal_path(criminal), method: :delete, class: 'card-remove-link', data: { confirm: "Execute #{criminal.name}?" } do %>
+          <i class="fas fa-syringe"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

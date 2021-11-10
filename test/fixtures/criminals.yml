@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sentence: 1
+  prison: one
+  image_url: MyString
+
+two:
+  name: MyString
+  sentence: 1
+  prison: two
+  image_url: MyString
