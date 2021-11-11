@@ -11,9 +11,17 @@
     <% @prison.criminals.each do |criminal| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= criminal.image_url %>)">
         <%= criminal.name %>
+        <%= link_to new_criminal_conviction_path(criminal), class: 'card-add-link' do %>
+          <i class="fas fa-gavel"></i>
+        <% end %>
         <%= link_to criminal_path(criminal), method: :delete, class: 'card-remove-link', data: { confirm: "Execute #{criminal.name}?" } do %>
           <i class="fas fa-syringe"></i>
         <% end %>
+        <div class="card-tags">
+          <% criminal.crimes.each do |crime| %>
+            <span><%= crime.name %></span>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
