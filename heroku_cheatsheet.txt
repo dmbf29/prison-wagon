@@ -1,0 +1,17 @@
+# Create an app
+heroku create app_name --region=us
+
+# Open the app in the browser
+heroku open
+
+# Follow the server logs
+heroku logs --tail
+
+# To migrate on heroku
+heroku run rails db:migrate
+
+# To seed on heroku
+heroku run rails db:seed
+
+# To run a command on heroku
+heroku run ....
