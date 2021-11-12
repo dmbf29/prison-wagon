@@ -5,4 +5,5 @@ class Criminal < ApplicationRecord
   has_many :crimes, through: :convictions
   # yann.crimes
   validates :name, presence: true, uniqueness: true
+  has_one_attached :photo
 end

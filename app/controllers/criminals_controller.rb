@@ -24,7 +24,7 @@ class CriminalsController < ApplicationController
   private
 
   def criminal_params
-    params.require(:criminal).permit(:name, :sentence, :image_url)
+    params.require(:criminal).permit(:name, :sentence, :image_url, :photo)
   end
 end
 
