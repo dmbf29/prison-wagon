@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # root to: 'lists#index'
   # get '/prisons/:id', to: 'prisons#show'
   # get '/prisons/:prison_id/criminals/new', to: 'criminals#new'
   # post '/prisons/:prison_id/criminals', to: 'criminals#create'
